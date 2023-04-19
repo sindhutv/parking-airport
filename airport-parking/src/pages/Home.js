@@ -17,7 +17,7 @@ const SearchForm = () => {
 
     const getAirport = async () => {
         try {
-            const { data, status } = await axios.get('http://localhost:9009/v1/airports');
+            const { data, status } = await axios.get('http://43.205.1.85:9009/v1/airports');
             if (status === 200 && data) {
                 setAirports(data?.results ?? [])
             } else {
